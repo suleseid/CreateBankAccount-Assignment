@@ -1,0 +1,32 @@
+﻿<Window x:Class="CreateBankAccount_Assignment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreateBankAccount_Assignment"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="414" Width="585">
+    <Canvas x:Name="btnP" Background="#FFFAD9D9" Margin="0,0,0,6">
+        <Label x:Name="lbCreateAccount" Content="Create An Account" Canvas.Left="58" Canvas.Top="19" Width="104"/>
+        <Label x:Name="lbLName" Content="Last Name" Canvas.Left="22" Canvas.Top="115" Width="103"/>
+        <Label x:Name="lbFName" Content="First name" Canvas.Left="22" Canvas.Top="59" Width="103"/>
+        <Label x:Name="lbBalance" Content="Starting Balance" Canvas.Left="22" Canvas.Top="165" Width="103"/>
+        <TextBox x:Name="txtBoxlName" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="146" Width="148" Height="19"/>
+        <TextBox x:Name="txtBoxBalance" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="196" Width="148" Height="21"/>
+        <RadioButton x:Name="rbtSaving" Content="Saving" Canvas.Left="22" Canvas.Top="233" Checked="RadioButton_Checked" Width="103"/>
+        <RadioButton x:Name="rbtChacking" Content="Chacking" Canvas.Left="22" Canvas.Top="262" Width="103"/>
+        <TextBox x:Name="txtBoxfName" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="90" Width="148" Height="19"/>
+        <Label x:Name="lbInterestRate" Content="Interest Rate" Canvas.Left="22" Canvas.Top="319" Width="88"/>
+        <TextBox x:Name="txtBoxSavingChacking" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="291" Width="148"/>
+        <ListBox x:Name="lbAccount" Height="360" Width="214" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="182" Canvas.Top="10" SelectionChanged="ListBox_SelectionChanged"/>
+        <Button x:Name="btnCreateAccount" Content="Create Account" Canvas.Left="22" Canvas.Top="350" Width="148" Click="btnCreateAccount_Click"/>
+        <Label x:Name="lbYear" Content="300" Canvas.Left="439" Canvas.Top="27" Width="69"/>
+        <TextBox x:Name="txtAmount" Canvas.Left="413" TextWrapping="Wrap" Canvas.Top="119" Width="143"/>
+        <Button x:Name="btnDeposit" Content="Deposit" Canvas.Left="420" Canvas.Top="173" Width="64" RenderTransformOrigin="0.5,0.5" Click="btnDeposit_Click"/>
+        <Button x:Name="btnWithdrow" Content="Withdraw" Canvas.Left="493" Canvas.Top="173" Width="63" RenderTransformOrigin="0.507,0.587" Click="btnWithdraw_Click"/>
+        <Button x:Name="btnAdvanceYear" Content="Advance A Year" Canvas.Left="434" Canvas.Top="221" Width="100" RenderTransformOrigin="0.507,0.587" Click="btnAdvanceYear_Click"/>
+        <Button x:Name="btnBA" Content="BA" Canvas.Left="521" Canvas.Top="345"/>
+        <Button Content="P" Canvas.Left="545" Canvas.Top="345" Width="11"/>
+    </Canvas>
+
+</Window>
