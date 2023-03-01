@@ -80,7 +80,7 @@ namespace CreateBankAccount_Assignment
             lbYear.Content = year++ + "";
         }
 
-        private void btnWithdrow_Click(object sender, RoutedEventArgs e)
+        private void btnWithdraw_Click(object sender, RoutedEventArgs e)
         {
             decimal amount = ValidateMoney(txtAmount.Text);
             //Validated if account is sellected
@@ -90,9 +90,19 @@ namespace CreateBankAccount_Assignment
                 Account Id = accounts[index];
 
                 Id.Withdrow(amount);
-                MessageBox.Show(accounts.Id.ToString());
+                MessageBox.Show(accounts.Count.ToString());
 
             }
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
