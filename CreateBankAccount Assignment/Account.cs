@@ -9,20 +9,21 @@ namespace CreateBankAccount_Assignment
 {
     internal class Account
     {
-        string id;  
+        string id;
         decimal balance;
         private static Random random = new Random();
         public Account(string fName, string lName, decimal amount) 
         {
            id = random.Next(100000, 100000).ToString();
-            CustomerName = $"{fName} {lName}";
-            this.balance = balance;
+           CustomerName = $"{fName} {lName}";
+           balance = balance;
+           
         }
 
         public decimal Balance { get => balance; }
         public string Id { get => id; }
         public string CustomerName { get => CustomerName; set => CustomerName = value; }
-     
+        
         public void Deposit(decimal amount)
         {
             if(amount <= 0)
